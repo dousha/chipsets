@@ -3,4 +3,4 @@ project(chipsets)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(chipsets main.cpp ByteCodeInterpreter.cpp ByteCodeInterpreter.h InterpreterFlagRegister.cpp InterpreterFlagRegister.h ByteCodeBlob.cpp ByteCodeBlob.h)
+add_executable(chipsets main.cpp ByteCodeInterpreter.cpp ByteCodeInterpreter.h InterpreterFlagRegister.cpp InterpreterFlagRegister.h ByteCodeBlob.cpp ByteCodeBlob.h ByteCodeCompiler.cpp ByteCodeCompiler.h)
