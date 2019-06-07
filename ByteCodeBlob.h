@@ -8,15 +8,19 @@
 #include <cstdint>
 #include <vector>
 #include <iostream>
+#include <fstream>
 
 class ByteCodeBlob {
-	// TODO
 public:
 	const ByteCodeBlob& operator<<(uint8_t byte);
-	bool writeToStream(const std::ostream& stream);
-	bool readFromStream(const std::istream& stream);
+	bool writeToStream(std::ostream& stream);
+	bool readFromStream(std::istream& stream);
+	bool writeToFile(std::ofstream& stream);
+	bool readFromFile(std::ifstream& stream);
+	const ByteCodeBlob& operator>>(uint8_t& byte);
 private:
 	std::vector<uint8_t> binary;
+	size_t pos;
 };
 
 

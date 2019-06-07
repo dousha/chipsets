@@ -11,6 +11,13 @@
 #include "InterpreterFlagRegister.h"
 #include "ByteCodeBlob.h"
 
+enum InterpreterState {
+	READY,
+	RUNNING,
+	WAITING,
+	ERROR,
+};
+
 class ByteCodeInterpreter {
 public:
 	ByteCodeInterpreter(ByteCodeBlob& blob);
